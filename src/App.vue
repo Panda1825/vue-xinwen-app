@@ -1,9 +1,6 @@
 <template>
-  <div id="app">
-    我是app组件
-  </div>
+    <router-view></router-view>
 </template>
-
 <script>
 
 export default {
