@@ -18,24 +18,24 @@ const mutations={
         // 需要进行持久化
          setItem(USER_KEY,state.user)
     },
-    // ADDCACHEPAGE(state,pageName){
-    //     if(!state.cachePages.includes(pageName)){
-    //         state.cachePages.push(pageName);
-    //     }
-    // },
-    // REMOVECACHEPAGE(state,pageName){
-    //     const index= state.cachePages.indexOf(pageName);
-    //     if(index!==-1){
-    //         state.cachePages.splice(index,1);
-    //     }
-    // }
+    ADDCACHEPAGE(state,pageName){
+        if(!state.cachePages.includes(pageName)){
+            state.cachePages.push(pageName);
+        }
+    },
+     REMOVECACHEPAGE(state,pageName){
+         const index= state.cachePages.indexOf(pageName);
+         if(index!==-1){
+             state.cachePages.splice(index,1);
+        }
+    }
 }
 
 // 准备state
 const state={
     user: getItem(USER_KEY),
 
-    // cachePages:['layout']
+    cachePages:['layout']
 }
 
 const getters={
